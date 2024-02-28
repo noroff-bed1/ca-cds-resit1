@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="center">
+      <h1 class="heading">
+        Noroff - <%= title %>
+      </h1>
+    </div>
+
+    <div id="particles-js" style="height:600px"></div>
+
+    <p>
+      Student name: <strong>
+        <%=user.name%>
+      </strong>
+    </p>
+    <p>
+      Student surname: <strong>
+        <%=user.surname%>
+      </strong>
+    </p>
+  </div>
+  <div class="centeronly">
+    <a href="https://vincentgarreau.com/particles.js/" class="biggertext">Credit to particles.js</a>
+  </div>
+</body>
+
+</html>
+
+<script src="particles.js"></script>
+<script>
+  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+  particlesJS.load('particles-js', 'assets/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+  });
+</script>
